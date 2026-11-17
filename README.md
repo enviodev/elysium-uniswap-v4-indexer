@@ -27,7 +27,7 @@ We also pulled every `Initialize` log on Elysium's PoolManager from its public R
 
 Hooks are the main new idea in Uniswap v4. They let a pool run its own contract logic around swaps and liquidity. On most chains a minority of pools use one. On Elysium almost every pool does. If you build on Elysium, the hook is the first thing to read on a pool, since it decides how swaps and liquidity behave there, and `HookPools` shows which hooks the most pools rely on.
 
-It also shows how to index a brand new chain on day one. Elysium had no HyperSync support at launch, so the config points HyperIndex at an RPC with `for: sync`. The handler code is the same as it would be on any HyperSync chain.
+It also shows how to index a brand new chain on day one. Elysium launched before HyperSync support, so the config points HyperIndex at an RPC with `for: sync`. Elysium is on HyperSync now (`https://99901.hypersync.xyz`), so you can drop the `rpc` block to sync faster. The handler code is the same as it would be on any HyperSync chain.
 
 ## What it indexes
 
